@@ -78,6 +78,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Configure tabs
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 require 'defaults.keymaps'
 
 require 'defaults.autocommands'
@@ -143,6 +148,7 @@ require('lazy').setup({
   require 'usr.plugins.autopairs',
   require 'usr.plugins.neo-tree',
   require 'usr.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'usr.plugins.nvim-ts-autotag', -- autoclose / autorename HTML tags
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
